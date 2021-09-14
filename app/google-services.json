@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1023108712670",
+    "project_id": "microphone-d0ba6",
+    "storage_bucket": "microphone-d0ba6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023108712670:android:ff3e72c92d027eee0d1a4f",
+        "android_client_info": {
+          "package_name": "com.example.microphone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023108712670-qgchhp7urlv74ol06eds7omrpjhrle7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.microphone",
+            "certificate_hash": "6edb42813c4ab0331e6fd67969f4679944841178"
+          }
+        },
+        {
+          "client_id": "1023108712670-av97h4dl3dmoikqtn88o03lf3mlad7bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSX4A3Y5GBDrw15OzeQ_btV7I_9srYXog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023108712670-av97h4dl3dmoikqtn88o03lf3mlad7bt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

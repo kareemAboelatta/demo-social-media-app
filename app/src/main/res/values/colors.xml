@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#946DDA</color>
+
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#A3A3A3</color>
+    <color name="colorYellow">#FFC107</color>
+    <color name="colorGreen">#05C30C</color>
+    <color name="colorInsta">#AD03CA</color>
+    <color name="colorPof">#04198E</color>
+    <color name="trans">#00000000</color>
+
+</resources>

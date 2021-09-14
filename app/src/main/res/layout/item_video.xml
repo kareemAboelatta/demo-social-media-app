@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#FCF9F9"
+    android:layout_margin="@dimen/_2sdp"
+    app:contentPadding="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="2dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_video_uPictureIv"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/item_video_uNameIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_video_uTimeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="33min " />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/item_video_m_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                android:src="@drawable/ic_more"></ImageButton>
+
+        </LinearLayout>
+
+
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/item_video_pTitleIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:text="I love my mom"
+            app:trimCollapsedText="Show less"
+            app:trimExpandedText="Show More"
+            app:trimLength="200"
+            app:trimMode="trimModeLength"
+            android:autoLink="all"
+            android:layout_margin="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@+id/profileLayout"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rtv_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/item_video_pTitleIv"
+            >
+            <FrameLayout
+                android:id="@+id/item_video_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:elevation="@dimen/_4sdp"
+                >
+                <VideoView
+                    android:id="@+id/item_video_rowV_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_320sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+
+                    />
+            </FrameLayout>
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/item_video_play"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_video_play"
+            />
+
+        <ProgressBar
+            android:id="@+id/item_video_Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/colorPrimary"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/item_video_ss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/rtv_video"
+            >
+            <TextView
+                android:id="@+id/item_video_pLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 like"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/_3sdp"
+                />
+            <TextView
+                android:id="@+id/item_video_pCommentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1.2k Comments"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="end"
+                android:layout_margin="@dimen/_3sdp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/item_video_sss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/item_video_ss"
+            >
+            <Button
+                android:id="@+id/item_video_like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Like"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_like_not"
+                android:layout_margin="@dimen/_5sdp"
+                ></Button>
+
+
+            <Button
+                android:id="@+id/item_video_comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Comment"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_comment"
+                android:layout_margin="@dimen/_5sdp"
+
+                ></Button>
+
+
+            <Button
+                android:id="@+id/item_video_read_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Read"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_read"
+                android:layout_margin="@dimen/_5sdp"
+
+                ></Button>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
